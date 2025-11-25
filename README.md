@@ -5,13 +5,14 @@
 **Comparação Experimental entre Server-Driven UI e UI Tradicional em Aplicativos iOS: Desempenho e Experiência do Usuário**
 
 ## 1.2 ID / código
+
 **1029366**
 
 ## 1.3 Versão do documento e histórico de revisão
 
 * **v1.0 – 21/11/2025** – Versão inicial
 
-## 1.4 Datas (criação, última atualização)
+## 1.4 Datas
 
 * **Criação:** 21/11/2025
 * **Última atualização:** 21/11/2025
@@ -34,81 +35,203 @@
 
 ## 2.1 Descrição do problema / oportunidade
 
-O ritmo de atualização e personalização das interfaces dos aplicativos iOS é cada vez mais demandado, mas o modelo tradicional, onde toda a interface está embutida no app, torna o processo lento e pouco flexível. Nessas arquiteturas, qualquer modificação visual ou estrutural exige uma nova versão do aplicativo, passando por etapas burocráticas como versionamento, build, submissão para aprovação na App Store e posterior publicação. Esse fluxo pode ser demorado, sobretudo devido aos processos de validação da loja. Além disso, mesmo após disponibilizar a atualização, não há garantia de que o usuário irá de fato baixar a nova versão, o que pode deixar parte da base desatualizada e prejudicar a padronização da experiência.
+O ritmo de atualização e personalização das interfaces dos aplicativos iOS é cada vez mais demandado, mas o modelo tradicional, onde toda a interface está embutida no app, torna o processo lento e pouco flexível. Nesse modelo, qualquer mudança exige nova versão, revisão da App Store e atualização pelo usuário — processos demorados e nem sempre garantidos.
 
-O modelo Server-Driven UI (SDUI) promete resolver esses desafios, permitindo alterações dinâmicas e personalizadas diretamente pelo backend, sem necessidade de update completo do app. Com isso, é possível contornar limitações de versionamento, acelerar o tempo de resposta às demandas de negócio e garantir que todos os usuários recebam rapidamente as mudanças na interface. Porém, ainda há dúvidas sobre o impacto real do SDUI no desempenho e na experiência do usuário em comparação com o modelo tradicional, principalmente em cenários de latência e conectividade.
+A arquitetura **Server-Driven UI (SDUI)** promete resolver esses desafios permitindo que a interface seja modificada dinamicamente pelo backend, sem depender de atualizações completas do app. Porém, ainda há dúvidas práticas sobre seu impacto em desempenho, experiência do usuário e complexidade técnica.
 
 ## 2.2 Contexto organizacional e técnico
 
-O experimento será realizado em ambiente acadêmico, com o estudante, professores e desenvolvedores convidados. Serão utilizados dois protótipos idênticos em funcionalidade:
+O experimento será realizado em ambiente acadêmico. Serão construídos dois protótipos equivalentes:
 
-* um construído em **SDUI** (server-driven)
-* outro **client-driven (UI tradicional)**
+* **SDUI (server-driven)**
+* **UI tradicional (client-driven)**
 
-Ambos desenvolvidos em Swift, utilizando Xcode e backend específico para o app SDUI.
+Ambos feitos em Swift com backend dedicado ao SDUI.
 
-## 2.3 Trabalhos e evidências prévias (internos e externos)
+## 2.3 Trabalhos e evidências prévias
 
-* Casos de uso do SDUI em empresas como *iFood*, *Nubank* e *Spotify* 
-* https://repositorio.ufms.br/handle/123456789/7963: Explorando a arquitetura do Server Driven UI
-* https://dspace.mackenzie.br/handle/10899/31160: Aplicação de server driven UI para interfaces mobile ios de e-commerce
+* Estudos de casos de SDUI em empresas como *iFood*, *Nubank*, *Spotify*
+* Repositório UFMS – *Explorando a arquitetura do Server Driven UI*
+* Repositório Mackenzie – *Aplicação de server driven UI para interfaces mobile iOS de e-commerce*
 
-## 2.4 Referencial teórico e empírico essencial
+## 2.4 Referencial teórico essencial
 
 ### Arquitetura Client-Driven UI
 
-Na abordagem **client-driven UI**, toda a estrutura da interface, lógicas de navegação e visualização são implementadas diretamente no código do aplicativo. Qualquer modificação exige uma nova versão, que precisa ser processada pelo ciclo de desenvolvimento (build, review, publicação) e, posteriormente, instalada pelo usuário. Isso pode causar lentidão no processo de evolução do produto e dificuldades para garantir que todos os usuários estejam na versão mais atual, impactando negativamente a experiência e a uniformidade da base.
+Interface e lógica estão embutidas no app. Qualquer mudança exige nova release, aprovação e atualização pelo usuário — processo lento e pouco flexível.
 
 ### Server-Driven UI (SDUI)
 
-**SDUI** é um paradigma arquitetural emergente no desenvolvimento mobile, no qual a definição da interface (composição, propriedades e até comportamentos básicos) é enviada pelo servidor em tempo real, tipicamente via estruturas como JSON ou XML. O aplicativo no dispositivo atua como um “renderizador” dessas instruções vindas do backend, exibindo a UI conforme definida remotamente.
+Backend envia a definição da interface em tempo real (JSON, XML etc.). O app age como renderizador. Traz flexibilidade, mas pode introduzir latência ou problemas em redes ruins.
 
 ### Experiência do Usuário (UX)
 
-A **Experiência do Usuário (UX)** engloba aspectos subjetivos e objetivos da interação do usuário com o aplicativo, incluindo facilidade de uso, tempo para completar tarefas, satisfação geral, clareza das instruções, velocidade, sensação de controle e confiança. A avaliação de UX pode ser realizada tanto por métricas objetivas (tempo de resposta, sucesso nas tarefas) quanto por escalas de validação subjetivas, como o **SUS (System Usability Scale)**.
+Inclui aspectos subjetivos e objetivos (satisfação, clareza, eficiência). Pode ser avaliada por métricas e escalas como **SUS**.
 
 ### Desempenho
 
-No contexto de apps móveis, **desempenho** é avaliado por meio do tempo de resposta das interfaces, consumo de recursos, taxa de sucesso nas operações e estabilidade. Embora SDUI otimize atualizações e permita maior flexibilidade, também pode introduzir desafios de performance relacionados ao tempo de comunicação entre o app e o servidor, especialmente em redes móveis instáveis.
-Aqui está o texto formatado corretamente em **Markdown**, pronto para copiar e colar:
+Envolve tempo de resposta, uso de recursos, erros e estabilidade. SDUI pode ser mais flexível, mas depender do servidor pode gerar impactos variáveis.
+
+---
 
 # 3. Objetivos e questões (Goal / Question / Metric)
 
-## 3.1 Objetivo geral
+## 3.1 Objetivo Geral (Goal – conforme template)
 
-**Analisar e comparar, sob a perspectiva de usuários e desenvolvedores, o desempenho e a experiência do usuário em aplicativos iOS com arquitetura Server-Driven UI versus UI Tradicional.**
+**Analyze** iOS application interfaces built with Server-Driven UI and Traditional UI
+**for the purpose of** evaluation and comparison
+**with respect to** performance, user experience and update process
+**from the point of view of** users, developers and decision-makers
+**in the context of** academic prototypes developed for this experiment.
 
+## 3.2 Objetivos Específicos
 
-## 3.2 Objetivos específicos (sugestão aprimorada)
+* **O1:** Avaliar e comparar o desempenho das UIs SDUI e Tradicional.
+* **O2:** Avaliar e comparar a experiência do usuário.
+* **O3:** Comparar o processo de atualização/versionamento entre as arquiteturas.
+* **O4:** Identificar vantagens, desvantagens e barreiras percebidas por desenvolvedores.
 
-* **O1:** Medir a diferença de tempo de resposta e sucesso nas tarefas entre SDUI e UI tradicional.
-* **O2:** Avaliar a satisfação e facilidade de uso percebidas por usuários finais em ambos os modelos.
-* **O3:** Relatar vantagens e dificuldades percebidas por desenvolvedores e gestores acerca da manutenção, atualização (versionamento) e adoção dos modelos SDUI e tradicional.
+## 3.3 Tabela GQM
 
+| Objetivo | Pergunta (Q)                                               | Métrica                               |
+| -------- | ---------------------------------------------------------- | ------------------------------------- |
+| O1       | Q1.1: Qual o tempo médio de resposta das interfaces?       | Tempo de resposta (ms); Desvio padrão |
+| O1       | Q1.2: Qual a taxa de erros/exceções?                       | Taxa de erros (%); Nº de erros        |
+| O1       | Q1.3: Qual o consumo de recursos?                          | CPU (%); Memória (MB)                 |
+| O2       | Q2.1: Qual o nível de satisfação dos usuários?             | Likert (1–5); NPS                     |
+| O2       | Q2.2: Qual a percepção de facilidade de uso?               | SUS; Tempo para tarefas               |
+| O2       | Q2.3: Diferença percebida de fluidez?                      | Likert (1–5); Interrupções            |
+| O3       | Q3.1: Tempo total para atualizar a UI em cada arquitetura? | Horas/dias; Taxa de adesão            |
+| O3       | Q3.2: Esforço dos devs para modificar a UI?                | Horas; Nº de etapas                   |
+| O3       | Q3.3: Percentual de usuários atualizados?                  | % usuários; Nº de versões simultâneas |
+| O4       | Q4.1: Vantagens percebidas pelos devs?                     | Frequência de temas; Likert           |
+| O4       | Q4.2: Barreiras técnicas encontradas?                      | Nº de barreiras; Dificuldade (1–5)    |
+| O4       | Q4.3: SDUI melhora a flexibilidade?                        | % que confirma; Exs qualitativos      |
 
-## 3.3 GQM – Goal / Question / Metric
+## 3.4 Tabela Descritiva das Métricas
 
-### **Goal**
+| Métrica                   | Descrição                        | Unidade     |
+| ------------------------- | -------------------------------- | ----------- |
+| Tempo de resposta         | Tempo médio por ação             | ms          |
+| Desvio padrão             | Variação dos tempos              | ms          |
+| Taxa de erros             | Proporção de erros               | %           |
+| Nº absoluto de erros      | Total de erros                   | Contagem    |
+| Uso de CPU                | Uso do processador               | %           |
+| Uso de memória            | Memória consumida                | MB          |
+| Satisfação pós-tarefa     | Avaliação do usuário             | Likert 1–5  |
+| NPS                       | Net Promoter Score               | –100 a +100 |
+| SUS                       | Avaliação de usabilidade padrão  | 0–100       |
+| Tempo para tarefa         | Duração da tarefa                | min         |
+| Avaliação de fluidez      | Percepção de fluidez             | Likert 1–5  |
+| Interrupções              | Travamentos ou falhas            | Contagem    |
+| Tempo de rollout          | Tempo até a UI chegar ao usuário | h/dias      |
+| Taxa de adesão            | Usuários com UI atualizada       | %           |
+| Esforço em horas          | Esforço dos devs                 | h           |
+| Nº de etapas              | Passos para concluir alteração   | Contagem    |
+| % de usuários atualizados | Cobertura da nova UI             | %           |
+| Nº de versões simultâneas | Fragmentação pós-update          | Contagem    |
+| Frequência de menções     | Citações em entrevistas          | Contagem    |
+| Escala de concordância    | Concordância com afirmativas     | Likert 1–5  |
+| Nº de barreiras           | Problemas relatados              | Contagem    |
+| Dificuldade média         | Grau médio de dificuldade        | Likert 1–5  |
+| % que confirma ganho      | Percepção de flexibilidade       | %           |
+| Exemplos qualitativos     | Evidências textuais              | Texto       |
 
-Avaliar e comparar as arquiteturas **Server-Driven UI** e **UI Tradicional** em aplicativos iOS, a fim de compreender impactos sobre desempenho, experiência do usuário e eficiência de atualização, do ponto de vista de usuários finais e desenvolvedores, no contexto de protótipos acadêmicos.
+---
 
+# 4. Escopo e contexto do experimento
 
-### **Questions e Métricas**
+## 4.1 Escopo funcional / de processo
 
-#### **Q1: Existe diferença significativa de desempenho (tempo de resposta)?**
+### Incluído
 
-* **Métrica:** Tempo de resposta (ms) — coleta automatizada
+* Análise e comparação de dois protótipos iOS (SDUI e Tradicional).
+* Execução de tarefas usuais pelos participantes.
+* Coletas objetivas e subjetivas (UX, desempenho etc.).
+* Avaliação do processo de atualização das UIs.
+* Entrevistas com desenvolvedores.
 
-#### **Q2: Usuários percebem diferença de satisfação/facilidade de uso?**
+### Excluído
 
-* **Métricas:**
+* Aplicativos reais de produção.
+* Análise em escala industrial.
+* Métricas de longo prazo (retenção, conversão etc.).
 
-  * Satisfação (Likert 1–5)
-  * Facilidade de uso (SUS)
+### Template 
 
-#### **Q3: O SDUI permite atualização de interface mais rápida e acessível?**
+*Analisar interfaces de aplicativos móveis iOS (protótipos Server-Driven UI e UI Tradicional)
+com o propósito de avaliação e comparação
+com relação a desempenho, experiência do usuário e processo de atualização
+do ponto de vista de usuários, desenvolvedores e tomadores de decisão
+no contexto de desenvolvimento acadêmico e testes controlados com usuários.*
 
-* **Métricas:**
+## 4.2 Contexto do estudo
 
-  * Tempo para atualizar interface (horas/dias)
-  * Esforço de manutenção (horas gastas)
+Estudo em ambiente acadêmico, com protótipos desenvolvidos por estudantes e testados por usuários com experiência básica em iOS, em laboratório controlado.
+
+## 4.3 Premissas
+
+* Protótipos estáveis.
+* Backend SDUI disponível.
+* Participantes presentes e instrumentos validados.
+
+## 4.4 Restrições
+
+* Tempo reduzido.
+* Poucos devices e participantes.
+* Dependência de infraestrutura de rede e laboratório.
+* Sem integração com apps reais.
+
+## 4.5 Limitações previstas
+
+* Baixa amostra reduz validez externa.
+* Protótipos simples.
+* Perfil limitado dos usuários.
+
+---
+
+# 5. Stakeholders e impacto esperado
+
+## 5.1 Stakeholders principais
+
+* Usuários/testadores
+* Desenvolvedores
+* Professores orientadores
+* Tomadores de decisão acadêmicos
+* Empresas potenciais interessadas
+
+## 5.2 Interesses e expectativas
+
+* **Usuários:** usabilidade e rapidez
+* **Desenvolvedores:** entender impactos técnicos
+* **Professores:** resultados confiáveis para pesquisa
+* **Empresas:** evidências práticas sobre SDUI
+
+## 5.3 Impactos potenciais
+
+* Geração de conhecimento aplicável
+* Influência na escolha de arquitetura
+* Possível impacto em cronogramas acadêmicos
+
+---
+
+# 6. Riscos de alto nível, premissas e critérios de sucesso
+
+## 6.1 Riscos
+
+* Atrasos no desenvolvimento
+* Instabilidade dos protótipos
+* Falta de engajamento dos participantes
+* Problemas no backend SDUI
+
+## 6.2 Critérios de sucesso (go / no-go)
+
+* Coleta concluída conforme protocolo
+* Mínimo 10 usuários e 2 desenvolvedores
+* Protótipos disponíveis durante todo o experimento
+
+## 6.3 Critérios de parada antecipada
+
+* Falha grave de infraestrutura
+* Número insuficiente de participantes
+* Impedimentos institucionais ou éticos
