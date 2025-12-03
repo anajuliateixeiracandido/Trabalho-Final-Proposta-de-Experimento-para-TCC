@@ -137,6 +137,11 @@ in the context of academic prototypes developed for this experiment.**
 | % que confirma ganho      | Percepção de flexibilidade       | %           |
 | Exemplos qualitativos     | Evidências textuais              | Texto       |
 
+
+Tempo de rollout:
+
+Tempo decorrido entre a liberação/push da atualização de interface no backend e a disponibilização ao usuário final no aplicativo. No SDUI, o rollout é esperado como imediato; no tradicional, dependerá do processo de aprovação e atualização via App Store.
+
 ---
 
 # 4. Escopo e contexto do experimento
@@ -295,6 +300,8 @@ Participam do estudo usuários (alunos e convidados com experiência básica/int
 | Tempo/esforço para update | Total de horas/etapas           |
 | Facilidade/fluidez        | Avaliação subjetiva             |
 
+Destaca-se que, para o objetivo de desempenho, a principal variável observada será o tempo de resposta; para experiência do usuário, o principal indicador será o escore SUS (System Usability Scale).
+
 ## 8.6 Variáveis de controle / bloqueio
 
 Serão mantidos constantes: tarefas, dispositivos, ambiente, tutorial inicial, tipo de conexão, script operacional e tempo disponível para execução.
@@ -327,6 +334,7 @@ O sorteio de ordem será feito manualmente ou por software, buscando uma distrib
 ## 9.3 Balanceamento e contrabalanço
 
 A divisão dos participantes entre as ordens de uso garante controle do viés de aprendizagem ou cansaço.
+O contrabalanceamento será obtido dividindo a amostra de modo que metade dos participantes execute primeiro o app SDUI e metade o Tradicional, mitigando o efeito de ordem (order effect) no experimento.
 
 ## 9.4 Número de grupos e sessões
 
@@ -399,6 +407,7 @@ Será conduzida uma rodada piloto com dois participantes e pelo menos um desenvo
 ## 12.1 Estratégia geral de análise
 
 Os dados serão organizados em planilhas e analisados para responder ao GQM. Serão comparadas médias, distribuições e variações entre SDUI e UI tradicional. Visualizações como boxplots e histogramas serão utilizadas.
+Além da análise global dos resultados, as métricas serão avaliadas separadamente por ordem de execução (SDUI primeiro/tradicional primeiro), de modo a identificar eventuais efeitos de aprendizagem ou fadiga ao longo das sessões.
 
 ## 12.2 Métodos estatísticos planejados
 
@@ -411,3 +420,222 @@ Participantes que não concluírem ambas as etapas serão excluídos da análise
 ## 12.4 Plano de análise para dados qualitativos
 
 As respostas abertas serão analisadas por codificação temática, agrupando categorias e triangulando com os dados quantitativos.
+As evidências qualitativas, ao confirmarem, complementarem ou desafiarem os achados quantitativos, serão usadas para fortalecer as interpretações, contextualizar as descobertas e propor hipóteses para estudos futuros.
+
+# 13. Avaliação de validade (ameaças e mitigação)
+
+## 13.1 Validade de conclusão
+
+As principais ameaças à validade de conclusão incluem:
+
+* **Baixo poder estatístico:** devido ao tamanho limitado da amostra, pode ser difícil detectar efeitos reais.
+  **Mitigação:** adoção de um desenho crossover intra-sujeito para maximizar a sensibilidade, e uso de análise descritiva complementar.
+* **Violação de suposições estatísticas:** testes paramétricos, como o t-teste, exigem normalidade dos dados.
+  **Mitigação:** aplicação de testes de normalidade (Shapiro-Wilk); caso as premissas não sejam atendidas, uso de testes não paramétricos (Wilcoxon).
+* **Erros de medição:** inconsistências nos logs automáticos ou respostas imprecisas nos questionários.
+  **Mitigação:** instrumentos revisados no piloto, instruções padronizadas e dupla checagem dos dados coletados.
+
+## 13.2 Validade interna
+
+Podem ocorrer ameaças como:
+
+* **History:** eventos externos durante as sessões de teste que afetem o desempenho.
+  **Mitigação:** realização dos testes em ambiente controlado e instrução para evitar distrações.
+* **Maturation:** cansaço, tédio ou aprendizado dos participantes.
+  **Mitigação:** sessões curtas, pausas obrigatórias entre testes e randomização da ordem dos aplicativos.
+* **Selection:** características prévias dos participantes interferindo nos resultados.
+  **Mitigação:** amostra homogênea quanto ao perfil, critérios claros de inclusão/exclusão e sorteio para ordem dos grupos.
+* **Instrumentation:** qualquer mudança nos instrumentos durante a coleta.
+  **Mitigação:** instrumentos e protocolo padronizados, não alterados após início da coleta.
+
+## 13.3 Validade de constructo
+
+Existe o risco de as métricas utilizadas não refletirem o que se pretende medir:
+
+* **Medidas subjetivas de satisfação e usabilidade:** podem ser influenciadas por expectativas ou experiências anteriores.
+  **Mitigação:** utilização de escalas validadas (SUS, NPS, Likert) e aplicação após cada uso, com instruções claras para interpretação das perguntas.
+* **Medidas objetivas de desempenho:** uso exclusivo dos logs automáticos para reduzir erro humano, revisão dos dados em amostra do piloto.
+* **Esforço de desenvolvimento:** entrevistas com roteiro padronizado para evitar ambiguidades.
+
+## 13.4 Validade externa
+
+A generalização dos resultados é limitada devido ao contexto:
+
+* **Contexto acadêmico:** os participantes são majoritariamente estudantes e usuários não avançados que podem não representar o público geral de apps iOS.
+  **Mitigação:** delimitação clara deste escopo nos resultados.
+* **Protótipos simplificados:** funcionalidades reduzidas podem não captar toda a complexidade de um app real.
+* **Ambiente controlado:** laboratório difere de uso cotidiano.
+  **Mitigação:** descrição transparente do contexto e recomendação de replicação em cenários reais.
+
+## 13.5 Resumo das principais ameaças e estratégias de mitigação
+
+| Tipo       | Ameaça                         | Mitigação                                                   |
+| ---------- | ------------------------------ | ----------------------------------------------------------- |
+| Conclusão  | Baixa amostra, erro de medição | Crossover, revisão de instrumentos, análise descritiva      |
+| Interna    | Maturation, History, Selection | Randomização ordem, pausas, critérios claros                |
+| Constructo | Métricas inadequadas           | Escalas validadas, logs automatizados                       |
+| Externa    | Contexto acadêmico, protótipo  | Relato do escopo nos resultados, recomendação de replicação |
+
+---
+
+# 14. Ética, privacidade e conformidade
+
+## 14.1 Questões éticas (uso de sujeitos, incentivos, etc.)
+
+Não haverá pressão para participação: todos os participantes serão voluntários, podendo desistir a qualquer momento, sem prejuízo. Serão evitados incentivos financeiros – se houver, será para ressarcimento simbólico. O uso predominante de estudantes requer cuidado para que não haja coerção por parte de professores ou avaliação atrelada à participação. O risco de exposição é mínimo, pois os dados não conterão identificação pessoal além das informações básicas de perfil.
+
+## 14.2 Consentimento informado
+
+Todos os participantes irão receber, antes do início, informações claras sobre o objetivo, procedimentos, eventuais riscos e benefícios do experimento. O aceite será registrado por meio de assinatura de termo de consentimento livre e esclarecido, assegurando direito à desistência em qualquer etapa, conforme determinado pelas normas éticas universitárias.
+
+## 14.3 Privacidade e proteção de dados
+
+Serão coletadas apenas informações mínimas: faixa etária, nível de experiência em iOS, respostas a questionários e logs de uso dos apps/protótipos. Não será solicitado nome, matrícula ou informações sensíveis. Os dados serão anonimizados – cada sujeito e cada log receberão um código identificador. O acesso será restrito aos pesquisadores responsáveis e orientador. Os dados serão mantidos pelo tempo necessário à análise e defesa do TCC e, após isso, descartados de forma segura.
+
+## 14.4 Aprovações necessárias
+
+O projeto será submetido à aprovação do orientador e, se exigido, à Comissão de Ética em Pesquisa da instituição (CEP). No momento, encontra-se em etapa de elaboração inicial aguardando parecer do orientador responsável.
+
+---
+
+# 15. Recursos, infraestrutura e orçamento
+
+## 15.1 Recursos humanos e papéis
+
+* Autor do TCC: planejamento, condução do experimento, coleta e análise dos dados.
+* Orientador: supervisão metodológica e ética, revisão do plano e dos materiais.
+* Desenvolvedores (caso haja contribuição extra): adaptação dos protótipos para coleta de métricas, suporte técnico durante a operação.
+
+## 15.2 Infraestrutura técnica necessária
+
+* Sala de laboratório com dispositivos iOS (iPhones/iPads) disponíveis.
+* Ambiente de rede estável para acesso ao backend.
+* Computador para registro, backup dos dados e operação dos questionários.
+* Servidor/backend SDUI dedicado (pode ser local ou remoto).
+* Repositório em nuvem para armazenamento temporário dos dados.
+
+## 15.3 Materiais e insumos
+
+* Protótipos dos aplicativos finalizados e testados.
+* Questionários impressos e/ou em Google Forms.
+* Termos de consentimento impressos.
+* Apostilas de orientação rápida, slides explicativos.
+* Canetas/lápis, pranchetas ou notebooks/tablets para anotação dos participantes.
+
+## 15.4 Orçamento e custos estimados
+
+* Equipamentos: provavelmente fornecidos pela universidade.
+* Impressão de materiais: estimativa de até R$100.
+* Hospedagem do backend: uso de serviços gratuitos/acadêmicos.
+* **Total: até R$200**, a serem custeados pela autora do TCC, sem fontes externas previstas.
+
+---
+
+# 16. Cronograma, marcos e riscos operacionais
+
+## 16.1 Macrocronograma (até o início da execução)
+
+| Etapa                                | Data prevista |
+| ------------------------------------ | ------------- |
+| Conclusão do plano                   | 05/12/2025    |
+| Aprovação e ajustes                  | 08/12/2025    |
+| Desenvolvimento final dos protótipos | 15/12/2025    |
+| Execução do piloto                   | 17/12/2025    |
+| Coleta principal                     | 20–22/12/2025 |
+| Análise e redação                    | 23–30/12/2025 |
+
+## 16.2 Dependências entre atividades
+
+* Execução do piloto depende do término dos protótipos e do plano aprovado.
+* Treinamento dos participantes depende do agendamento da coleta.
+* Coleta principal ocorre somente após ajustes pós-piloto e treinamento.
+
+## 16.3 Riscos operacionais e plano de contingência
+
+* Baixa participação: ampliar o recrutamento, buscar outros cursos.
+* Instabilidade dos protótipos ou backend: preparação de backups dos protótipos e plano B de rede local.
+* Doença ou indisponibilidade dos envolvidos: marcar datas alternativas e dividir tarefas entre orientador e autora.
+
+---
+
+# 17. Governança do experimento
+
+## 17.1 Papéis e responsabilidades formais
+
+* Autora (PI): responsável pelo planejamento, execução, registro, análise dos dados, e redação do relatório.
+* Orientador: apoia nos aspectos éticos, metodológicos e valida as etapas.
+* Desenvolvedores auxiliares (se houver): suporte nos protótipos.
+
+## 17.2 Ritos de acompanhamento pré-execução
+
+* Checkpoints semanais com o orientador via reuniões ou e-mails.
+* Revisão obrigatória do plano final e do protocolo piloto antes da coleta.
+* Feedback pós-piloto para revisão das etapas se necessário.
+
+## 17.3 Processo de controle de mudanças no plano
+
+* Qualquer alteração significativa deverá ser documentada por e-mail e aprovada pelo orientador.
+* Mudanças são registradas no histórico de versões do plano e comunicadas formalmente a todos os envolvidos antes da adoção.
+
+---
+
+# 18. Plano de documentação e reprodutibilidade
+
+## 18.1 Repositórios e convenções de nomeação
+
+Todos os documentos, instrumentos, planilhas e scripts serão armazenados em repositório Google Drive acadêmico protegido.
+Nomeação: **“TCC_SDUI_Nome_Documento_DataVersão”.**
+
+## 18.2 Templates e artefatos padrão
+
+* Questionário de satisfação e SUS (Google Forms).
+* Planilhas de registro de logs.
+* Termo de consentimento padrão da universidade.
+* Roteiro de entrevistas semi-estruturadas.
+* Checklists para execução do experimento.
+
+## 18.3 Plano de empacotamento para replicação futura
+
+* Todos os documentos, questionários, scripts de coleta/análise e guias serão organizados em uma pasta **“Reprodutibilidade”**, facilitando uso por outros alunos/equipes.
+* Relatório final descrevendo limitações, recomendações e instruções para replicação.
+
+---
+
+# 19. Plano de comunicação
+
+## 19.1 Públicos e mensagens-chave pré-execução
+
+* Participantes: objetivos, escopo, datas, procedimentos e direitos.
+* Orientador: versão final do plano, datas dos marcos, eventuais ajustes.
+* Equipe de laboratório: datas reservadas, recursos necessários.
+* Desenvolvedores (se houver): prazos, escopo, formato dos dados exigidos.
+
+## 19.2 Canais e frequência de comunicação
+
+* E-mail para convites oficiais, updates e documentação.
+* Mensagens por grupos de WhatsApp dos cursos para recrutamento.
+* Reuniões presenciais com orientador e equipe antes dos marcos do cronograma.
+
+## 19.3 Pontos de comunicação obrigatórios
+
+* Aprovação final do plano.
+* Conclusão do piloto/ajustes necessários.
+* Mudanças relevantes na logística.
+* Divulgação dos resultados preliminares e publicação do relatório final.
+
+---
+
+# 20. Critérios de prontidão para execução (Definition of Ready)
+
+## 20.1 Checklist de prontidão (itens que devem estar completos)
+
+* Plano do experimento aprovado pelo orientador.
+* Instrumentos e protótipos concluídos e revisados pelo menos 3 dias antes do piloto.
+* Aprovação ética formalizada/documentada se aplicável.
+* Agenda dos participantes confirmada.
+* Materiais impressos ou digitais prontos (questionários, consentimentos, guiões).
+
+## 20.2 Aprovações finais para iniciar a operação
+
+* Aval do orientador via e-mail ou assinatura em ata/documento digital.
+* Caso exija, aprovação do CEP/universidade registrada em cópia para arquivo.
