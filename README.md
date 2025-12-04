@@ -172,48 +172,57 @@ O estudo será realizado em ambiente acadêmico, utilizando laboratório univers
 
 ## 4.3 Premissas
 
-* Protótipos deverão estar estáveis e funcionais.
-* Backend SDUI deverá estar disponível, estável e responsivo.
-* Os participantes estarão presentes nas datas combinadas.
-* Todos os instrumentos e materiais serão previamente conferidos e validados.
-
+* Protótipos estáveis e funcionais: É fundamental que os aplicativos estejam sem bugs críticos, já que falhas técnicas podem comprometer a validade dos resultados.
+* Backend SDUI disponível, estável e responsivo: O backend responsável por “enviar” as mudanças de interface precisa funcionar corretamente durante todo o experimento; caso contrário, resultados de desempenho ou experiência do usuário seriam distorcidos.
+* Participantes presentes nas datas combinadas: Para garantir cronograma e qualidade da amostragem, espera-se que todos os selecionados compareçam e cumpram o protocolo, evitando vazios ou interrupções.
+* Instrumentos e materiais conferidos e validados: Questionários, logs e orientações serão revisados e testados antes do uso. Assim, evita-se erro de coleta de dados por falhas nos instrumentos ou instruções mal compreendidas.
+  
 ## 4.4 Restrições
-
-* Tempo reduzido para coleta de dados e execução dos testes.
-* Limitação de dispositivos e de participantes.
-* Dependência da infraestrutura de rede/laboratório disponível.
-* Não utilização de apps reais ou de larga escala.
+* Tempo reduzido: O período para montar o experimento, coletar dados e analisar os resultados é limitado pelo calendário acadêmico, o que restringe quantidade de participantes, número de testes e possibilidade de realizar iterações sucessivas.
+* Limitação de dispositivos e participantes: O número de iPhones/iPads disponíveis na universidade é restrito, assim como o número de pessoas que podem participar, o que reduz a escala de avaliação e pode impactar o poder estatístico.
+* Dependência da infraestrutura de rede/laboratório: A execução dos protótipos SDUI exige conexão de internet estável e equipamento funcional; falhas podem afetar desempenho, usabilidade e coleta de logs.
+* Não utilização de aplicativos reais de larga escala: O estudo trabalha com protótipos feitos para teste acadêmico, sem avaliação de apps em produção ou em um cenário de milhares de usuários e eventos reais do mercado.
 
 ## 4.5 Limitações previstas
 
-* Amostra pequena pode reduzir validez externa.
-* Protótipos de escopo restrito e contexto simplificado.
-* Perfil dos participantes representa apenas parcela dos usuários reais.
+* Amostra pequena pode reduzir validez externa: Com número reduzido de participantes, fica mais difícil garantir que os resultados representem o universo total de usuários iOS (exemplo: clientes reais de um banco ou grande e-commerce).
+* Protótipos de escopo restrito e contexto simplificado: Aplicativos usados são simplificados comparados a apps comerciais – têm fluxo controlado, menos integrações e menos complexidade de uso, o que pode esconder problemas do mundo real.
+* Perfil dos participantes: Por serem majoritariamente estudantes ou pessoas de perfil semelhante, os resultados podem não refletir o comportamento de usuários mais diversos em termos de idade, profissão, grau de habilidade tecnológica ou contexto de uso.
 
 ---
-
 # 5. Stakeholders e impacto esperado
 
 ## 5.1 Stakeholders principais
 
-* Usuários/testadores dos protótipos
-* Desenvolvedores/prototipadores
-* Professores e orientadores do projeto
-* Tomadores de decisão acadêmicos
-* Empresas/organizações interessadas em SDUI
+- **Usuários/testadores dos protótipos:** São os participantes finais que interagem com os aplicativos SDUI e tradicional. Suas percepções, dificuldades e feedbacks são fundamentais tanto para validação das hipóteses quanto para ajustes práticos dos protótipos. Suas experiências ajudam a avaliar a real aceitação das soluções propostas.
 
-## 5.2 Interesses e expectativas
+- **Desenvolvedores/prototipadores:** Envolvem os próprios alunos que desenvolvem e implementam as soluções. Têm interesse em conhecer melhor os impactos de cada arquitetura no esforço de manutenção, atualização e facilidade de evolução do app. Ganham experiência prática valiosa em processos de experimentação, coleta de métricas e análise crítica.
 
-* Usuários: obter experiência fluida e rápida.
-* Desenvolvedores: entender e quantificar impactos arquiteturais.
-* Professores: gerar dados empíricos confiáveis e replicáveis.
-* Empresas: avaliar prós/contras da adoção de SDUI no mercado.
+- **Professores e orientadores do projeto:** Responsáveis por garantir o rigor científico e metodológico, supervisionando desde o planejamento até a análise dos dados. Buscam, principalmente, que os resultados sejam confiáveis e que o processo seja replicável, formando referência acadêmica para outros trabalhos futuros.
+
+- **Tomadores de decisão acadêmicos:** Coordenadores, membros de bancas e diretores que podem adotar as lições aprendidas para direcionar currículos, incentivar novas pesquisas ou fomentar parcerias externas.
+
+- **Empresas/organizações interessadas em SDUI:** Startups, times de desenvolvimento mobile, empresas de tecnologia ou prestadores de serviços digitais podem usar as evidências deste experimento para apoiar suas escolhas de arquitetura, pesando custo, esforço e qualidade final para o usuário.
+
+## 5.2 Interesses e expectativas:
+
+- **Usuários:** Esperam que o experimento identifique qual arquitetura traz uma experiência mais fluida, fácil e eficiente, facilitando o uso cotidiano de apps.
+
+- **Desenvolvedores:** Buscam entender, com base em dados reais, se SDUI realmente simplifica o processo de atualização, reduz esforço de manutenção e entrega produtividade maior em projetos mobile.
+
+- **Professores/orientadores:** Têm expectativa de ver o método científico aplicado na prática, auxiliando na formação técnica e crítica dos alunos, bem como contribuindo para o avanço do conhecimento dentro da instituição.
+
+- **Empresas:** Almejam utilizar os resultados práticos do estudo para tomar decisões mais seguras e fundamentadas sobre arquitetura de software, especialmente ao avaliar riscos e oportunidades trazidos pela adoção de SDUI frente à UI tradicional.
 
 ## 5.3 Impactos potenciais
 
-* Geração de conhecimento prático sobre tema relevante.
-* Subsídio à tomada de decisão sobre arquiteturas em projetos reais.
-* Possível influência em ementas de disciplinas de desenvolvimento mobile.
+- **Geração de conhecimento prático** sobre um tema em voga, oferecendo dados e insights que podem embasar futuras decisões tanto dentro quanto fora da universidade.
+
+- **Subsídio à tomada de decisão** por arquitetos, desenvolvedores e gestores, indicando os pontos fortes e fracos de cada abordagem, contribuindo para escolhas técnicas mais embasadas e alinhadas às necessidades e capacidades do time/produto.
+
+- **Influência nas ementas de disciplinas e conteúdos acadêmicos**, possibilitando discussões mais ricas e atualizadas em sala de aula sobre tendências do desenvolvimento mobile.
+
+- **Possível impacto no mercado local:** Empresas parceiras da universidade ou envolvidas no projeto podem adaptar ou repensar suas estratégias de arquitetura com base nos resultados do estudo.
 
 ---
 
@@ -221,23 +230,30 @@ O estudo será realizado em ambiente acadêmico, utilizando laboratório univers
 
 ## 6.1 Riscos
 
-* Atrasos no desenvolvimento/depuração dos protótipos.
-* Instabilidade dos sistemas/acesso ao backend SDUI durante testes.
-* Baixa adesão ou engajamento dos participantes.
-* Problemas éticos ou logísticos que inviabilizem a coleta.
+- **Atrasos no desenvolvimento/depuração dos protótipos:** Caso os apps não estejam prontos ou estáveis até a data marcada para o experimento, todo cronograma pode ser comprometido e o volume/utilidade dos dados reduzido.
+
+- **Instabilidade dos sistemas ou do backend SDUI durante testes:** Problemas de infraestrutura — como quedas frequentes da API ou lentidão excessiva — podem distorcer as avaliações de desempenho e frustrar os participantes.
+
+- **Baixa adesão ou engajamento dos participantes:** Riscos de os sujeitos convidados faltarem, abandonarem o teste ou não se comprometerem com seriedade com as tarefas, gerando coleta parcial, enviesada ou não representativa.
+
+- **Problemas éticos ou logísticos:** Falhas na obtenção dos consentimentos, objeções do comitê de ética ou conflitos de agenda podem atrasar ou inviabilizar etapas importantes da coleta de dados.
 
 ## 6.2 Critérios de sucesso (go / no-go)
 
-* Coleta concluída de acordo com o protocolo estabelecido.
-* Participação ≥ 10 usuários e ≥ 2 desenvolvedores.
-* Ambos protótipos disponíveis e funcionando na íntegra para todos os participantes.
+- **Execução do protocolo planejado sem desvios graves:** Todas as etapas de coleta, desde o tutorial até entrevistas finais, devem ser respeitadas, garantindo integridade dos dados.
+
+- **Participação mínima adequada:** Ao menos 10 usuários e 2 desenvolvedores devem concluir todas as tarefas e questionários, assegurando viabilidade estatística e confiabilidade básica dos resultados.
+
+- **Protótipos íntegros e disponíveis:** Durante todo o período de experimento, ambos protótipos devem estar funcionando, evitando testes interrompidos ou registros perdidos.
 
 ## 6.3 Critérios de parada antecipada
 
-* Falhas graves de infraestrutura ou sistemas não solucionadas até a data de início.
-* Número de participantes insuficiente para rodar a comparação.
-* Bloqueios/reprovações éticas ou institucionais.
+Embora todo esforço seja feito para realizar o experimento até o final, algumas condições obrigam a interromper ou adiar a execução:
 
+- **Falhas graves e recorrentes de infraestrutura ou sistemas**, impossibilitando o uso normal dos aplicativos pelos participantes.
+- **Número insuficiente de participantes** após tentativas de recrutamento e remarcações, o que inviabilizaria qualquer análise significativa.
+- **Bloqueios ou reprovações éticas ou institucionais**, como não liberação de uso do laboratório ou veto do comitê de ética após revisão do plano.
+  
 ---
 
 # 7. Modelo conceitual e hipóteses
