@@ -520,7 +520,8 @@ O projeto será submetido à aprovação do orientador e, se exigido, à Comiss�
 
 ## 15.2 Infraestrutura técnica necessária
 
-* Sala de laboratório com dispositivos iOS (iPhones/iPads) disponíveis.
+* Sala de laboratório disponível.
+* Dispositivos iOS (iPhones/iPads)
 * Ambiente de rede estável para acesso ao backend.
 * Computador para registro, backup dos dados e operação dos questionários.
 * Servidor/backend SDUI dedicado (pode ser local ou remoto).
@@ -533,13 +534,6 @@ O projeto será submetido à aprovação do orientador e, se exigido, à Comiss�
 * Termos de consentimento impressos.
 * Apostilas de orientação rápida, slides explicativos.
 * Canetas/lápis, pranchetas ou notebooks/tablets para anotação dos participantes.
-
-## 15.4 Orçamento e custos estimados
-
-* Equipamentos: provavelmente fornecidos pela universidade.
-* Impressão de materiais: estimativa de até R$100.
-* Hospedagem do backend: uso de serviços gratuitos/acadêmicos.
-* **Total: até R$200**, a serem custeados pela autora do TCC, sem fontes externas previstas.
 
 ---
 
