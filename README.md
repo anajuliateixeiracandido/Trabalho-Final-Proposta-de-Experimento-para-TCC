@@ -78,11 +78,7 @@ Inclui tempo de resposta, uso de recursos, número de erros e estabilidade geral
 
 ## 3.1 Objetivo Geral (Goal – conforme template)
 
-**Analyze iOS application interfaces built with Server-Driven UI and Traditional UI
-for the purpose of evaluation and comparison
-with respect to performance, user experience and update process
-from the point of view of users, developers and decision-makers
-in the context of academic prototypes developed for this experiment.**
+**Analisar interfaces de aplicativos iOS construídas com Server-Driven UI e com UI tradicional para fins de avaliação e comparação quanto ao desempenho, à experiência do usuário e ao processo de atualização, do ponto de vista de usuários, desenvolvedores e tomadores de decisão, no contexto de protótipos acadêmicos desenvolvidos para este experimento.**
 
 ## 3.2 Objetivos Específicos
 
