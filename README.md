@@ -76,7 +76,7 @@ Inclui tempo de resposta, uso de recursos, número de erros e estabilidade geral
 
 # 3. Objetivos e questões (Goal / Question / Metric)
 
-## 3.1 Objetivo Geral (Goal – conforme template)
+## 3.1 Objetivo Geral 
 
 **Analisar interfaces de aplicativos iOS construídas com Server-Driven UI e com UI tradicional para fins de avaliação e comparação quanto ao desempenho, à experiência do usuário e ao processo de atualização, do ponto de vista de usuários, desenvolvedores e tomadores de decisão, no contexto de protótipos acadêmicos desenvolvidos para este experimento.**
 
