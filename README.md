@@ -46,7 +46,7 @@ O experimento será realizado em ambiente acadêmico, com recursos laboratoriais
 * **SDUI (server-driven)**
 * **UI tradicional (client-driven)**
 
-Ambos desenvolvidos em Swift com backend dedicado para o app SDUI.
+Ambos desenvolvidos em Swift com backend implementado.
 
 ## 2.3 Trabalhos e evidências prévias
 
