@@ -215,14 +215,10 @@ O estudo será realizado em ambiente acadêmico, utilizando laboratório univers
 
 ## 5.3 Impactos potenciais
 
-- **Geração de conhecimento prático** sobre um tema em voga, oferecendo dados e insights que podem embasar futuras decisões tanto dentro quanto fora da universidade.
-
 - **Subsídio à tomada de decisão** por arquitetos, desenvolvedores e gestores, indicando os pontos fortes e fracos de cada abordagem, contribuindo para escolhas técnicas mais embasadas e alinhadas às necessidades e capacidades do time/produto.
 
 - **Influência nas ementas de disciplinas e conteúdos acadêmicos**, possibilitando discussões mais ricas e atualizadas em sala de aula sobre tendências do desenvolvimento mobile.
-
-- **Possível impacto no mercado local:** Empresas parceiras da universidade ou envolvidas no projeto podem adaptar ou repensar suas estratégias de arquitetura com base nos resultados do estudo.
-
+  
 ---
 
 # 6. Riscos de alto nível, premissas e critérios de sucesso
