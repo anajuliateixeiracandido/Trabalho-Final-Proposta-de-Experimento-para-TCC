@@ -358,33 +358,41 @@ Serão dois grupos (A e B). Cada participante executará duas sessões.
 
 ## 10.1 População-alvo
 
-Busca-se representar usuários reais ou potenciais de aplicativos iOS.
+A população-alvo deste experimento é composta por usuários reais ou potenciais de aplicativos iOS, ou seja, pessoas que já utilizam smartphones Apple em seu dia a dia, independentemente de serem especialistas em tecnologia. O objetivo é selecionar participantes que representem o perfil típico de consumidores de aplicativos mobile, trazendo uma amostra de uso próxima do mundo real, mas sem exigir alto grau de especialização. Dessa forma, busca-se garantir que as conclusões possam ser relevantes tanto para usuários finais quanto para equipes técnicas que projetam apps voltados a esse público.
 
 ## 10.2 Critérios de inclusão de sujeitos
 
-* Idade ≥ 18 anos
-* Experiência mínima com iOS
-* Disponibilidade
-* Consentimento formal
-* Ausência de impedimentos graves
+* Ter idade igual ou superior a 18 anos (garantindo capacidade legal e maturidade mínima para consentimento e compreensão das tarefas).
+* Possuir experiência mínima prévia em uso de iOS, como ter utilizado aplicativos em iPhones ou iPads por pelo menos 6 meses — o que assegura familiaridade suficiente para avaliar as interfaces sem ruído de aprendizado básico.
+* Ter disponibilidade para comparecer integralmente às sessões de experimento, respeitando datas e horários pré-combinados.
+* Assinar o Termo de Consentimento Livre e Esclarecido (TCLE), reconhecendo que compreende os riscos, benefícios e condições do estudo, e que pode desistir a qualquer momento sem prejuízo.
+* Não apresentar impedimentos motores, visuais ou cognitivos graves que possam interferir significativamente na interação com os aplicativos ou distorcer sua percepção durante o teste.
 
 ## 10.3 Critérios de exclusão
 
-* Recusa de consentimento
-* Ausência não justificada
-* Membro da equipe de desenvolvimento
+* Recusar ou não completar o consentimento formal.
+* Ausentar-se, injustificadamente, de qualquer etapa ou sessão obrigatória do experimento.
+* Ter participação direta no desenvolvimento dos protótipos utilizados no experimento (para evitar viés do “insider” — já conhecer ou ter apego a determinado app).
+* Não conseguir executar as tarefas por dificuldades técnicas, mesmo após tutorial.
+* Apresentar comportamento fora do protocolo que prejudique a coleta (como buscar burlar rotinas, responder aleatoriamente ou abandonar testes no meio).
 
 ## 10.4 Tamanho da amostra planejado
 
-10 a 20 participantes + desenvolvedores (mínimo 2).
+O estudo foi planejado para trabalhar com uma amostra entre 10 e 20 participantes para a etapa de testes dos protótipos, número compatível com as melhores práticas para experimentos controlados em ambiente universitário, considerando limitações de tempo, recursos e viabilidade de recrutamento.
+Além desses usuários, também participam os desenvolvedores envolvidos na criação dos protótipos, que serão entrevistados sobre esforço, dificuldades e percepções técnicas, sendo o número mínimo de desenvolvedores de 2.
 
 ## 10.5 Método de seleção / recrutamento
 
-Amostragem por conveniência.
+* Serão convidados alunos, colegas, amigos e contatos do ambiente universitário que se encaixem nos critérios de inclusão e aceitem participar voluntariamente.
+* O convite será feito em sala de aula, por e-mail, WhatsApp de grupos de curso, e presencialmente.
+* Em caso de excesso de interessados, a prioridade será definida por ordem de inscrição e disponibilidade de agenda, buscando também diversidade de perfil sempre que possível.
+* Todos os participantes receberão com antecedência informações sobre o estudo, agenda, exigências e esclarecimento de dúvidas antes da confirmação.
 
 ## 10.6 Treinamento e preparação
 
-Tutorial oral/impresso, explicação das tarefas, exemplos de perguntas.
+* Tutorial oral e/ou impresso sobre os objetivos do estudo e o que é esperado deles.
+* Demonstração prática dos aplicativos SDUI e tradicional, mostrando telas, fluxo de navegação e exemplos de tarefas (como cadastro, busca, compra).
+* Explicação detalhada de como funciona cada uma das etapas do experimento, inclusive instruções de preenchimento dos questionários e logs.
 
 ---
 
@@ -423,11 +431,14 @@ Além da análise global dos resultados, as métricas serão avaliadas separadam
 
 ## 12.2 Métodos estatísticos planejados
 
-t-teste pareado; caso a normalidade não seja atendida, teste de Wilcoxon. Medidas descritivas também serão exploradas.
+* t-teste pareado: Esse teste é utilizado quando queremos comparar médias de duas condições (no caso, os dois apps) sendo que os mesmos participantes testam ambas. O “pareado” significa que cada pessoa serve de comparação para si mesma; por exemplo, comparamos o tempo de resposta do usuário na interface SDUI e na interface tradicional. O t-teste é apropriado quando os dados têm distribuição próxima do normal, ou seja, não apresentam grandes distorções ou assimetrias.
+* Teste de Wilcoxon: Caso nossos dados não se encaixem nos pressupostos do t-teste (distribuição normal, variâncias similares), ou a amostra seja muito pequena, usamos o teste de Wilcoxon. Ele é um teste não paramétrico apropriado para comparar dois conjuntos de medições dependentes (também pareado), mas sem exigir distribuição normal. Isso aumenta a confiabilidade do resultado mesmo quando os dados apresentam distorções.
+* Medidas descritivas: Antes de fazer as comparações estatísticas, serão calculadas medidas descritivas como médias, desvios, medianas e criado gráficos (boxplots, histogramas) para visualizar distribuições, detectar tendências e analisar a dispersão dos resultados. Isso baseia toda a interpretação estatística em números claros e facilita a comunicação dos resultados.
 
 ## 12.3 Tratamento de dados faltantes e outliers
+* Dados faltantes: Participantes que não completarem ambas as sessões do experimento (por exemplo, faltaram no segundo dia, abandonaram durante a tarefa, ou não responderam integralmente aos questionários) serão excluídos da análise. Assim, garantimos que todas as comparações entre SDUI e UI tradicional serão feitas com o mesmo conjunto de participantes, mantendo a lógica do desenho crossover e evitando vieses decorrentes de dados incompletos.
+* Outliers: Caso surjam valores extremamente fora do padrão esperado (por exemplo, um tempo de resposta centenas de vezes superior ao dos demais, possivelmente causado por distração, erro técnico ou fator externo), esse caso será revisado em conjunto com o orientador e só será removido da análise se houver justificativa clara – como erro operacional, falha do dispositivo, desatenção evidente ou resposta absurdamente incoerente. Essa decisão será devidamente documentada para garantir transparência e justificar eventuais exclusões, conforme orientações metodológicas da disciplina.
 
-Participantes que não concluírem ambas as etapas serão excluídos da análise. Outliers poderão ser removidos após discussão.
 
 ## 12.4 Plano de análise para dados qualitativos
 
