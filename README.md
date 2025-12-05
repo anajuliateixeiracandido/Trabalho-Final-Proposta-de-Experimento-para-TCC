@@ -447,9 +447,9 @@ As evidências qualitativas, ao confirmarem, complementarem ou desafiarem os ach
 As principais ameaças à validade de conclusão incluem:
 
 * **Baixo poder estatístico:** devido ao tamanho limitado da amostra, pode ser difícil detectar efeitos reais.
+
   **Mitigação:** adoção de um desenho crossover intra-sujeito para maximizar a sensibilidade, e uso de análise descritiva complementar.
-* **Violação de suposições estatísticas:** testes paramétricos, como o t-teste, exigem normalidade dos dados.
-  **Mitigação:** aplicação de testes de normalidade (Shapiro-Wilk); caso as premissas não sejam atendidas, uso de testes não paramétricos (Wilcoxon).
+  
 * **Erros de medição:** inconsistências nos logs automáticos ou respostas imprecisas nos questionários.
   **Mitigação:** instrumentos revisados no piloto, instruções padronizadas e dupla checagem dos dados coletados.
 
@@ -461,10 +461,6 @@ Podem ocorrer ameaças como:
   **Mitigação:** realização dos testes em ambiente controlado e instrução para evitar distrações.
 * **Maturation:** cansaço, tédio ou aprendizado dos participantes.
   **Mitigação:** sessões curtas, pausas obrigatórias entre testes e randomização da ordem dos aplicativos.
-* **Selection:** características prévias dos participantes interferindo nos resultados.
-  **Mitigação:** amostra homogênea quanto ao perfil, critérios claros de inclusão/exclusão e sorteio para ordem dos grupos.
-* **Instrumentation:** qualquer mudança nos instrumentos durante a coleta.
-  **Mitigação:** instrumentos e protocolo padronizados, não alterados após início da coleta.
 
 ## 13.3 Validade de constructo
 
