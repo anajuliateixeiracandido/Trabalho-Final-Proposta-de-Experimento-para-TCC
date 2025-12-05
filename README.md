@@ -178,8 +178,7 @@ O estudo será realizado em ambiente acadêmico, utilizando laboratório univers
 * Instrumentos e materiais conferidos e validados: Questionários, logs e orientações serão revisados e testados antes do uso. Assim, evita-se erro de coleta de dados por falhas nos instrumentos ou instruções mal compreendidas.
   
 ## 4.4 Restrições
-* Tempo reduzido: O período para montar o experimento, coletar dados e analisar os resultados é limitado pelo calendário acadêmico, o que restringe quantidade de participantes, número de testes e possibilidade de realizar iterações sucessivas.
-* Limitação de dispositivos e participantes: O número de iPhones/iPads disponíveis na universidade é restrito, assim como o número de pessoas que podem participar, o que reduz a escala de avaliação e pode impactar o poder estatístico.
+* Limitação de dispositivos e participantes: O número de iPhones/iPads que será factível conseguir, assim como o número de pessoas que podem participar, o que reduz a escala de avaliação e pode impactar o poder estatístico.
 * Dependência da infraestrutura de rede/laboratório: A execução dos protótipos SDUI exige conexão de internet estável e equipamento funcional; falhas podem afetar desempenho, usabilidade e coleta de logs.
 * Não utilização de aplicativos reais de larga escala: O estudo trabalha com protótipos feitos para teste acadêmico, sem avaliação de apps em produção ou em um cenário de milhares de usuários e eventos reais do mercado.
 
